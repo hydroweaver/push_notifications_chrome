@@ -25,7 +25,7 @@ const saveSubscription = async subscription => {
 self.addEventListener('activate', async () => {
     // This will be called only once when the service worker is activated.
     try {
-        const applicationServerKey = urlB64ToUint8Array('public key');
+        const applicationServerKey = urlB64ToUint8Array('BDCdb-zaIX5QK2iLYh1yxKJdSQRsp4dbIyF1LVq7cxeeu_3zfwnY_D8h4oHbZ71aTxC7sBeDCaGAS48zEnXNNTE');
         const options = { applicationServerKey, userVisibleOnly: true }
       const subscription = await self.registration.pushManager.subscribe(options)
       const response = await saveSubscription(subscription)
@@ -38,7 +38,7 @@ self.addEventListener('activate', async () => {
   self.addEventListener('push', function(event) {
     if (event.data) {
       console.log('Push event!! ', event.data.text())
-      showLocalNotification("Yolo", event.data.text(),  self.registration);
+      showLocalNotification("Notification from Server", event.data.text(),  self.registration);
     } else {
       console.log('Push event but no data')
     }

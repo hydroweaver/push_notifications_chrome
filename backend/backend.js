@@ -8,8 +8,8 @@ const app = express()
 
 const vapidKeys = {
   publicKey:
-    '',
-  privateKey: '',
+    'BDCdb-zaIX5QK2iLYh1yxKJdSQRsp4dbIyF1LVq7cxeeu_3zfwnY_D8h4oHbZ71aTxC7sBeDCaGAS48zEnXNNTE',
+  privateKey: '_h0QsdS24RG0opYIb0ovaW-7POGQv_e1Is2XYoB_jxY',
 }
 
 app.use(cors()) 
